@@ -16,7 +16,27 @@ namespace PontoEletronico
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            FrmLogin vld = new FrmLogin();
+            FrmNewUser vld3 = new FrmNewUser();
+
+
+
+
+            if (vld.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new FrmMain());
+            }
+   
+            if (vld.ShowDialog() == DialogResult.No)
+            {
+                Application.Run(new FrmNewUser());
+            }
+
+
+
+
+
+
         }
     }
 }
